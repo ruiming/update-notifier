@@ -108,7 +108,7 @@ class UpdateNotifier {
 	}
 
 	async checkNpm() {
-		const {distTag} = this.options;
+		const {distTag,registryUrl} = this.options;
 		const latest = await latestVersion()(this.packageName, {version: distTag, registryUrl});
 
 		return {
